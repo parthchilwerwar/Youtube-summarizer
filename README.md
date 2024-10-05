@@ -59,11 +59,3 @@ To get started with VideoInsight, follow these steps:
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to the creators of [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/) for their amazing frameworks.
-- Special thanks to Google for providing the Generative AI API.
