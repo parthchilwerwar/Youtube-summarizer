@@ -153,7 +153,8 @@ export default function Home() {
     <div className={`min-h-screen bg-gray-900 text-white ${scrolled ? 'navbar-scrolled' : ''}`}>
       <Navbar className={`bg-black`} isBordered>
         <NavbarBrand>
-          <RiVideoLine className="text-white mr-2 text-2xl" />
+        {/* <RiVideoLine className="text-white mr-2 text-2xl" /> */}
+          <img src="favicon.ico" alt="VideoInsight Logo" className="text-white mr-2 text-2xl mr-2 w-9 h-9" />
           <p className="font-bold text-white">VideoInsight</p>
         </NavbarBrand>
         <NavbarContent justify="end">
