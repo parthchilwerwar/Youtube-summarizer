@@ -3,31 +3,93 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Transcription styles */
+.transcript-content {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;
+  position: relative;
+}
+
+/* Timestamp links styling */
+.timestamp-link {
+  color: #3b82f6; /* Blue-500 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: normal;
+}
+
+.timestamp-link:hover {
+  color: #60a5fa; /* Blue-400 */
+  text-decoration: underline;
+}
+
+/* Make the timestamp numbers themselves blue */
+.timestamp-link {
+  color: #3b82f6 !important;
+}
+
+.transcript-content p {
+  margin-bottom: 0.875rem;
+  font-size: 16px;
+}
+
+/* Section headers */
+.transcript-content strong {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* First section header should have less top margin */
+.transcript-content strong:first-child {
+  margin-top: 0.5rem;
+}
+
+.transcript-content ul,
+.transcript-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.transcript-content li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Bullet point styling */
+.transcript-content p:not(:has(strong)) {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  font-size: 16px;
+}
+
+/* Style the bullet character */
+.transcript-content p:not(:has(strong))::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: normal;
 }
